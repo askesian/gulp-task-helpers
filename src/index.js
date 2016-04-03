@@ -6,6 +6,11 @@ import TaskMaker from './TaskMaker';
 class GulpHelpers {
 
 	taskMaker(gulp) {
+		if (_isUndefined(gulp)) {
+			throw new ReferenceError('Gulp must be passed as a parameter to taskMaker', 'index.js', 32);
+		}
+		this._gulp = gulp;
+
 		if (!this.tm) {
 			this.tm = new TaskMaker(gulp);
 		}
@@ -28,7 +33,7 @@ class GulpHelpers {
 			if (name === 'lodash' || name === '_') {
 				this.frameworks[name] = require('lodash');
 			} else if (name === 'run-sequence') {
-				this.frameworks[name] = require('run-sequence');
+				this.frameworks[name] = require('run-sequence').use(this._gulp);
 			}
 		}
 		return this.frameworks[name];
