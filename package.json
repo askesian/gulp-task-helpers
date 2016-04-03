@@ -1,20 +1,21 @@
 {
-  "name": "gulp-helpers",
+  "name": "gulp-task-helpers",
   "version": "5.0.0",
   "description": "A set of tasks and helpers for gulp",
   "main": "dist/index.js",
   "license": "MIT",
-  "homepage": "https://github.com/lookfirst/gulp-helpers",
+  "homepage": "https://github.com/askesian/gulp-task-helpers",
   "author": {
-    "name": "Jon Stevens",
-    "email": "latchkey@gmail.com"
+    "name": "Chris Wigley",
+    "email": "cwigley@gmail.com"
   },
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/lookfirst/gulp-helpers.git"
+    "url": "https://github.com/askesian/gulp-task-helpers.git"
   },
   "bugs": {
-    "url": "https://github.com/lookfirst/gulp-helpers/issues"
+    "url": "https://github.com/askesian/gulp-task-helpers/issues"
   },
   "scripts": {
     "test": "npm run-script compile && mocha --compilers js:babel/register",
